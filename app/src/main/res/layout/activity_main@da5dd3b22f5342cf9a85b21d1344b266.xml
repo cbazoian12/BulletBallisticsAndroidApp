@@ -1,0 +1,81 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".MainActivity" tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:src="@drawable/goballisticlogo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/userInputDistance"
+            android:layout_weight="0.23"
+            android:textIsSelectable="true"
+            android:inputType="number|numberDecimal"
+            android:hint="Distance in yards" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Distance"
+            android:id="@+id/dropTextView"
+            android:layout_weight="0.07"
+            android:inputType="none" />
+
+        <TextView
+            android:layout_width="174dp"
+            android:layout_height="42dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Select Bulletype"
+            android:id="@+id/selectType" />
+
+        <RadioGroup
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/bulletTypeRadioGroup">
+
+            <RadioButton
+                android:layout_width="96dp"
+                android:layout_height="79dp"
+                android:text=".22"
+                android:id="@+id/bulletType1"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="120dp"
+                android:layout_height="74dp"
+                android:text=".50 BMG"
+                android:id="@+id/bulletType8"
+                android:checked="false" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/resultTextView"
+            android:layout_weight="0.26"
+            android:editable="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:text="Calculate"
+            android:id="@+id/calcButton" />
+
+
+    </LinearLayout>
+</FrameLayout>
